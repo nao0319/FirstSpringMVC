@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/index</title>
+</head>
+<body>
+  <h1>Employee List</h1>
+  <table border="1">
+    <tr>
+      <th>no</th>
+      <th>name</th>
+      <th>salary</th>
+      <th>department</th>
+    </tr>
+    <tr th:each="employee:${employees}" th:object="${employee}">
+      <td th:text="*{no}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{salary}"></td>
+      <td th:text="*{dept.name}"></td>
+      <td><a th:href="@{edit(no=*{no})}">更新</a></td>
+      <td><a th:href="@{delete(no=*{no})}">削除</a></td>
+    </tr>
+  </table>
+  <a th:href="@{new}">New</a>
+</body>
+</html>

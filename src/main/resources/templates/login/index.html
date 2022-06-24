@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>login/index</title>
+</head>
+<body>
+	<h1>Login</h1>
+	<ul th:if="${form} != null" th:object="${form}">
+		<li th:each="err:${#fields.allErrors()}" th:text="${err}" />
+	</ul>
+	<p th:text="${flash}" />
+	<form th:action="@{/login/auth}" method="POST" th:object="${form}">
+		Login Id:<input type="text" name="id" th:value="*{id}?:''" />
+		<br />
+		Password:<input type="password" name="password"
+			th:value="*{password}?:''" />
+		<br />
+		<button type="submit">ログイン</button>
+	</form>
+</body>
+</html>

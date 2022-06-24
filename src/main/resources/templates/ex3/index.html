@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>service/index</title>
+</head>
+<body>
+	<h1>サービス一覧</h1>
+	<table border="1">
+		<tr>
+			<th>no</th>
+			<th>サービス名</th>
+			<th>料金</th>
+		</tr>
+		<tr th:each="service:${servicies}" th:object="${service}">
+			<td th:text="*{no}"></td>
+			<td th:text="*{sername}"></td>
+			<td>￥<span th:text="${#numbers.formatInteger(service.price, 3, 'COMMA')}"/></td>
+			<td><a th:href="@{edit(no=*{no})}">更新</a>&nbsp;&nbsp;
+			<a th:href="@{delete(no=*{no})}">削除</a></td>
+		</tr>
+	</table>
+	<a th:href="@{input}">New</a>
+</body>
+</html>

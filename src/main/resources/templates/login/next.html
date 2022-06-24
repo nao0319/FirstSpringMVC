@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/next</title>
+</head>
+<body>
+	<h1>Next Page</h1>
+	<p>
+		「 <span th:text="${user.name}"></span> 」さんがログアウトしました。
+	</p>
+	<a th:href="@{last}">次のページへ</a>
+</body>
+</html>

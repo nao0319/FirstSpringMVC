@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>入力画面</title>
+</head>
+<body>
+
+	文章を入力してください。
+	<form th:action="@{a4}" method="POST">
+		
+		<textarea name="formText" cols="50" rows="10"></textarea>
+		<br />
+		<button type="submit">送信</button>
+	</form>
+
+</body>
+</html>

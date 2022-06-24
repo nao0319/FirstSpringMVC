@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/create</title>
+</head>
+<body>
+	<h1>New Employee</h1>
+	
+	<ul th:if="${employee} != null" th:object="${employee}">
+		<li th:each="err:${#fields.allErrors()}" th:text="${err}"/>
+	</ul>
+	
+	<form th:action="@{/employee/create}" method="POST"  th:object="${employee}">
+		no: <input type="text" name="no" th:value="*{no}?:''"/> 
+		<br /> 
+		name: <input type="text" name="name" th:value="*{name}?:''"/> 
+		<br /> 
+		salary:<input type="text" name="salary" th:value="*{salary}?:''"/>
+		<br />
+		deptNo:<input type="text" name="dept" th:value="*{dept} ? *{dept.no} : ''" />
+		<br />
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>

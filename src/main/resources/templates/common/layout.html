@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title></title>
+</head>
+<body>
+	<h1>横網ペットサロン</h1>
+	<nav>
+	  <ul>
+	    <li><a href="#">顧客</a></li>
+	    <li><a href="#">ペット</a></li>
+	    <li><a href="#">サービス</a></li>
+	    <li><a href="#">実施サービス</a></li>
+	    <li><a href="#">集計</a></li>
+	    <li><a href="#">ログアウト</a></li>
+	    <li><a href="#">ようこそ<span th:text="${@userBean.name} ? ${@userBean.name} : 'ゲスト'"></span></a></li>
+	  </ul>
+	</nav>
+	<hr />
+	<section layout:fragment="contentss"></section>
+	<hr />
+	<p>Copyright 2022 Yokoami Pet Salon All Reserved.</p>
+</body>
+</html>

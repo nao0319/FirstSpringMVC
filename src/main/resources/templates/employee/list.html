@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/list</title>
+</head>
+<body th:object="${employees}">
+	<h1>Employee Pagination</h1>
+	<table>
+		<tr>
+			<th>no</th>
+			<th>name</th>
+			<th>salary</th>
+			<th>department</th>
+		</tr>
+		<tr th:each="employee:${employees}" th:object="${employee}">
+			<td th:text="*{no}"></td>
+			<td th:text="*{name}"></td>
+			<td th:text="*{salary}"></td>
+			<td th:text="*{dept.name}"></td>
+		</tr>
+	</table>
+	<a th:if="*{hasPrevious()}"
+		th:href="@{list(page=*{number}-1,size=2,sort=no)}">前のページ</a> |
+	<a th:if="*{hasNext()}"
+		th:href="@{list(page=*{number}+1,size=2,sort=no)}">次のページ</a>
+</body>
+</html>

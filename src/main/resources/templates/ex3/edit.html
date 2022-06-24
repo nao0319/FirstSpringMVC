@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/edit</title>
+</head>
+<body>
+	更新内容を入力してください
+	<form th:action="@{update}" method="POST" th:object="${service}">
+		<input type="hidden" name="no" th:value="*{no}" /> 
+		<br /> 
+		◆サービスID 
+		<br /> 
+		<input type="text" name="no" th:value="*{no}" disabled="true" />
+		<br /> 
+		<br /> 
+		◆サービス名
+		<br /> 
+		<input type="text" name="sername" th:value="*{sername}" />
+		<br /> 
+		<br /> 
+		◆金額
+		<br /> 
+		<input type="text" name="price" th:value="*{price}" />
+		<br />
+		<br /> 
+		<button type="submit">更新</button>
+	</form>
+</body>
+</html>

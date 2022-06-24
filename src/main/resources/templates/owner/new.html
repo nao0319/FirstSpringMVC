@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorate="~{/common/layout}">
+<head>
+<meta charset="UTF-8" />
+<title>Yokoami</title>
+</head>
+<body>
+	<section layout:fragment="contentss">
+	<h1>顧客登録</h1>
+	<ul th:if="${employee} != null" th:object="${employee}">
+		<li th:each="err:${#fields.allErrors()}" th:text="${err}"/>
+	</ul>
+	<form th:action="@{create}" method="POST">
+		ID	
+		<br/>
+		<input type="text" name="id" />
+		<br/>
+		氏名
+		<br/>
+		<input type="text" name="name" />
+		<br/>
+		住所
+		<br/>
+		<input type="text" name="address" />
+		<br/>
+		電話
+		<br/>
+		<input type="text" name="tel" />
+		<br/>
+		email
+		<br/>
+		<input type="text" name="email" />
+		<br/>
+		<button type="submit">登録</button>
+	</form>
+	</section>
+</body>
+</html>

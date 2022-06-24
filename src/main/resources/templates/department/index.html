@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>department/index</title>
+</head>
+<body>
+	<h1>Search Department</h1>
+	<form action="/department/search" method="POST">
+		dept no:<input type="text" name="no" /><br />
+		<button type="submit">送信</button>
+	</form>
+	<h1>Employee List</h1>
+	<table border="1">
+		<tr>
+			<th>no</th>
+			<th>name</th>
+			<th>salary</th>
+			<th>department</th>
+		</tr>
+		<tr th:each="employee:${dept.employees}" th:object="${employee}">
+			<td th:text="*{no}"></td>
+			<td th:text="*{name}"></td>
+			<td th:text="*{salary}"></td>
+			<td th:text="*{dept.name}"></td>
+		</tr>
+	</table>
+</body>
+</html>

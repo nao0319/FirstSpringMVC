@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>入力画面</title>
+</head>
+<body>
+	<form th:action="@{b1}" method="POST">
+		年代 
+		</br> 
+		<input type="radio" name="age" value="10 代以下">10代</input>
+		<input type="radio" name="age" value="20 代">20代 </input>
+ 		<input type="radio" name="age" value="30 代">30代</input>
+		<input type="radio" name="age" value="40 代">40代 </input>
+ 
+		</br> 
+		趣味
+		</br> 
+		<input type="checkbox" name="hobby" value="スポーツ">スポーツ
+		<br /> 
+		<input type="checkbox" name="hobby" value="音楽">音楽
+		<br /> 
+		<input type="checkbox" name="hobby" value="映画">映画 
+		<br /> 
+		<input type="checkbox" name="hobby" value="読書">読書 
+		<br />
+
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>

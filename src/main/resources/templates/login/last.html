@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/last</title>
+</head>
+<body>
+	<h1>Last Page</h1>
+	<p th:if="${user}!=null">
+		「<span th:text="${user.name}"></span>」さんがログイン中です。
+	</p>
+	<p th:if="${user}==null">セッションが切断されました。</p>
+	<a th:href="@{/login/}">ログインページへ</a>
+</body>
+</html>

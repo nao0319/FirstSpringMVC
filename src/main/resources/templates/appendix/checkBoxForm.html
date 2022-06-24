@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>学習済みリスト</title>
+</head>
+<body>
+	<p th:each="item : ${learn}" th:text="${item}" />
+</body>
+</html>

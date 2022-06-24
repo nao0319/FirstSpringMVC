@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>input.html</title>
+</head>
+<body th:object = "${plofile}">
+	あなたのプロフィール<br />
+	<br />
+	◆名前：<span th:text="*{name}" /><br />
+	◆会社名：<span th:text="*{companyName}" /><br />
+	◆入社年：<span th:text="*{entryYear}" /><br />
+	◆年代：<span th:text="*{age}" /><br />
+	<br />
+	<br />
+	◆コメント<br />
+	<span th:text="*{comment}" /><br />
+
+</body>
+</html>

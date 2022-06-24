@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/mypage</title>
+</head>
+<body>
+	<h1>My Page</h1>
+	<p th:text="${flash}" />
+	<p>
+		ようこそ「 <span th:text="${user.name}"></span> 」さん！
+	</p>
+	<a th:href="@{next}">ログアウトする</a>
+</body>
+</html>

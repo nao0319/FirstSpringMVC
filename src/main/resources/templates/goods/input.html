@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>入力画面</title>
+</head>
+<body>
+	サービス情報を入力してください
+	<br/>
+	<form th:action="@{create}" method="POST">
+	<br/>
+	◆商品ID	
+	<br/>
+	<input type="text" name="id" />
+	<br/>
+	◆商品名
+	<br/>
+	<input type="text" name="title" />
+	<br/>
+	◆カテゴリー
+	<br/>
+		<select  name="categ">
+			<option th:each="category:${categories}" th:object="${category}" th:text="*{categoryName}" 
+			th:value="*{categoryId}"></option>
+		</select>
+		
+	<br/>
+	<button type="submit">登録</button>
+	</form>
+</body>
+</html>

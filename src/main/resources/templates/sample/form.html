@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>入力画面</title>
+</head>
+<body>
+
+	<span th:text="${form.user}"/>は
+	<span th:text="${userlen}"/>文字です
+	<br/>
+	<span th:text="${form.address}"/>は
+	<span th:text="${addrlen}"/>文字です
+	<br/>
+	<a th:href="@{input}">戻る</a>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>category/create</title>
+</head>
+<body th:object="${category}">
+	以下のカテゴリーを登録しました
+	<br /> 
+	カテゴリーID：
+	<span th:text="*{categoryId}"></span>
+	<br /> カテゴリー名：
+	<span th:text="*{categoryName}"></span>
+	<br />
+	<br />
+	<a th:href="@{.}">一覧へ</a>
+</body>
+</html>

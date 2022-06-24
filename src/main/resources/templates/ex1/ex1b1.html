@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	年代：
+	<br/>
+	<p th:text ="${age}"/>
+	<br/>
+	<br/>
+	趣味：
+	<br/>
+	<p th:each ="myHobby:${hobby}" th:text= "${myHobby}"/>
+	<br/>
+</body>
+</html>

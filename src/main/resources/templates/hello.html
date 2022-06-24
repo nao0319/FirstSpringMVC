@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorate="~{/layout}">
+<head>
+<meta charset="UTF-8" />
+<title>HELLO SpringMVC</title>
+</head>
+<body>
+
+	<section layout:fragment="content">
+		<h1>こんにちは,SpringMVC!</h1>
+		<p th:text="${greeting}"></p>
+		
+		<section th:replace="common :: frag1"></section>
+		
+	</section>
+</body>
+</html>

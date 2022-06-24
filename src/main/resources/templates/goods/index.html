@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>category/index</title>
+</head>
+<body>
+	商品一覧
+	<table border="1">
+		<tr>
+			<th>ID</th>
+			<th>タイトル</th>
+			<th>カテゴリー名</th>
+		</tr>
+		<tr th:each="good:${goods}" th:object="${good}">
+			<td th:text="*{id}"></td>
+			<td th:text="*{title}"></td>
+			<td th:text ="*{categ} ? *{categ.categoryName} : ''"></td>
+		</tr>
+	</table>
+	<a th:href="@{input}">新規登録</a>
+</body>
+</html>

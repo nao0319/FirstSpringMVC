@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>入力画面</title>
+</head>
+<body>
+
+	あなたが入力した文章は以下です。
+	</br>
+	「<span th:text="${formText}" />」
+	</br>
+	文字数は<span th:text="${txtlen}" />です。
+
+</body>
+</html>

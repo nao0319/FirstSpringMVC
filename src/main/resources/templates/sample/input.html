@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>入力画面</title>
+</head>
+<body>
+
+<form th:action="@{form}" method="POST">
+	名前：<input type="text" name="user" /><br/>
+	住所：<input type="text" name="address"/><br/>
+	<button type="submit">送信</button>
+</form>
+
+</body>
+</html>

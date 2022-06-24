@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>employee/create</title>
+</head>
+<body th:object="${service}">
+	以下のサービスを登録しました
+	<br />
+	サービスID:
+	<span th:text="*{no}"></span>
+	<br /> サービス名:
+	<span th:text="*{sername}"></span>
+	<br /> 金額:
+	<span th:text="*{price}"></span>
+	<br />
+	<br />
+	<a th:href="@{.}">一覧へ</a>
+</body>
+</html>

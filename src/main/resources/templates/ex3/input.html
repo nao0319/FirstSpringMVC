@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	サービス情報を入力してください
+	<form th:action="@{/service/save}" method="POST">
+		<br /> 
+		◆サービスID
+		<br /> 
+		<input type="text" name="no" /> 
+		<br /> 
+		◆サービス名
+		<br /> 
+		<input type="text" name="sername" /> 
+		<br /> 
+		◆金額
+		<br />
+		<input type="text" name="price" />
+		<br />
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>

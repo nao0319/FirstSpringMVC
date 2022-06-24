@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>input.html</title>
+</head>
+<body>
+	<form th:action="@{checkBoxForm}" method="POST">
+		<p>学習済</p>
+		<input type="checkbox" name="learn" value="java01">Java Basic
+		<br /> 
+		<input type="checkbox" name="learn" value="java02">Java
+		Spring Framework 
+		<br /> 
+		<input type="checkbox" name="learn" value="front01">html 
+		<br /> <input type="checkbox" name="learn" value="front02">css 
+		<br />
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>

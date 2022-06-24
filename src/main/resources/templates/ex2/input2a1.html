@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>input.html</title>
+</head>
+<body>
+	プロフィールを入力してください
+	<br/>
+	
+	<form th:action="@{a1}" method="POST">
+	
+		◆名前
+		<br />
+		<input type="text" name="name" />
+		<br />
+		
+		◆会社名
+		<br />
+		<input type="text" name="companyName" />
+		<br />
+		 
+		◆入社年（整数）
+		<br />
+		<input type="text" name="entryYear" />
+		<br />
+		
+		◆年代
+		<br />
+		<input type="radio" name="age" value= "20 代"/>20 代
+		<br/>
+		<input type="radio" name="age" value= "30 代"/>30 代
+		<br/>
+		<input type="radio" name="age" value= "40 代"/>40 代
+		<br/>
+		<input type="radio" name="age" value= "50 代"/>50 代
+		<br/>
+		<br/>
+		
+		◆コメント
+		<br />
+		<input type="text" name="comment" />
+		<br />
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>
